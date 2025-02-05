@@ -1,0 +1,54 @@
+#home {
+
+    .formSearch {
+        margin: auto;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        border-radius: 0.2em;
+        width: 50%;
+        position: relative;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        .input-group .form-control {
+            background-color: #302E3B;
+            border-color: #302E3B;
+            color: white;
+
+            &::placeholder {
+                color: #B0B0B0;
+            }
+        }
+
+        .btnSearch {
+            background-color: #302E3B;
+            border-color: #302E3B;
+
+            &:hover {
+                background-color: #1f1f26;
+                border-color: #1f1f26;
+            }
+        }
+
+        .listSuggests {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+
+            .suggests {
+                background-color: #1f1f2680;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-color: #302E3B;
+                color: white;
+                &:hover {
+                    background-color: #302E3B;
+                }
+            }
+        }
+    }
+
+   
+}

@@ -1,0 +1,23 @@
+.cardStates {
+    background-color: #1F2127;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+
+    &:hover {
+        background-color: #23252d;
+    }
+
+    .temperature {
+        font-size: 2em;
+        font-weight: bold;
+        margin-top: 0.2em;
+        margin-bottom: -0.2em;
+    }
+
+    .weatherDescription {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

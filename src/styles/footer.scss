@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 2em;
+
+    .footer-content {
+        text-align: center;
+        color: white;
+
+        a{
+            text-decoration: none;
+            color: #1EFF5F;
+
+            &:hover{
+                color: #07822a;
+            }
+        }
+    }
+}
