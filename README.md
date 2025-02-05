@@ -1,4 +1,4 @@
-## 🚀 Sobre o Projeto  
+## ℹ️ Sobre o Projeto  
 Este é um site desenvolvido em **React.js** com **Vite** que permite buscar informações climáticas de qualquer cidade ou estado do mundo. Ele utiliza as APIs **OpenWeather** e **OpenCage** para fornecer dados detalhados sobre o clima e localização, incluindo:  
 
 - 🌡️ **Temperatura** (Celsius, Kelvin e Fahrenheit)  
