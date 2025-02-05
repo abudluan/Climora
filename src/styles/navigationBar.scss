@@ -3,7 +3,11 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    .navbar-brand{
+    .navbar-brand {
         font-weight: bold;
+    }
+
+    .icon {
+        vertical-align: sub;
     }
 }

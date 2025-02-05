@@ -58,7 +58,7 @@ const Home = () => {
                         <Form.Control
                             className="custom-input"
                             ref={inputRef}
-                            placeholder="Procure o clima de uma cidade ou país..."
+                            placeholder="Procure o clima de uma cidade ou estado..."
                             value={city}
                             onChange={(e) => {
                                 handleCityChange(e, setCity, setSuggestions);

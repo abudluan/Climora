@@ -1,14 +1,9 @@
 import React from "react";
-import { Container, Navbar, Button, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Container, Navbar, Button } from "react-bootstrap";
 import '../styles/navigationBar.scss';
+import { FaGithub } from "react-icons/fa";
 
 const NavigationBar = () => {
-
-    const renderTooltip = (props) => (
-        <Tooltip id="button-tooltip" {...props}>
-            Em breve!
-        </Tooltip>
-    );
 
     return (
         <Navbar className="navbar" data-bs-theme="dark">
@@ -16,12 +11,8 @@ const NavigationBar = () => {
                 <Navbar.Brand href="/">Climora</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <OverlayTrigger
-                        placement="bottom"
-                        overlay={renderTooltip}
-                    >
-                        <Button variant="outline-secondary">Baixe o app</Button>
-                    </OverlayTrigger>
+
+                    <Button href="https://github.com/abudluan/Climora" target="_blank" variant="dark"><FaGithub className="icon" size='20' /> GitHub</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
