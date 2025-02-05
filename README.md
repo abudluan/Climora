@@ -1,8 +1,24 @@
-# React + Vite
+## 🚀 Sobre o Projeto  
+Este é um site desenvolvido em **React.js** com **Vite** que permite buscar informações climáticas de qualquer cidade ou estado do mundo. Ele utiliza as APIs **OpenWeather** e **OpenCage** para fornecer dados detalhados sobre o clima e localização, incluindo:  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 🌡️ **Temperatura** (Celsius, Kelvin e Fahrenheit)  
+- ❄️ **Sensação térmica**  
+- 💨 **Velocidade do vento**  
+- 💧 **Umidade do ar**  
+- ☔ **Probabilidade de chuva**  
+- ⏳ **Previsão para as próximas 24 horas**  
+- 📅 **Previsão para os próximos 5 dias**  
+- 🏭 **Qualidade do ar**  
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologias Utilizadas  
+O projeto foi desenvolvido com as seguintes tecnologias:  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React.js** (usando Vite)  
+- 🎨 **Bootstrap & SCSS** (para estilização)  
+- ☁️ **OpenWeather API** (dados climáticos)  
+- 📍 **OpenCage API** (geocodificação)  
+
+## 🚀 Deploy na Vercel
+**Climora** está publicado na Vercel!
+
+🔗 Acesse: https://climora.vercel.app
