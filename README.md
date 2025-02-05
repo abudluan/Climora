@@ -13,10 +13,10 @@ Este é um site desenvolvido em **React.js** com **Vite** que permite buscar inf
 ## 🛠️ Tecnologias Utilizadas  
 O projeto foi desenvolvido com as seguintes tecnologias:  
 
-- ⚛️ **React.js** (usando Vite)  
-- 🎨 **Bootstrap & SCSS** (para estilização)  
-- ☁️ **OpenWeather API** (dados climáticos)  
-- 📍 **OpenCage API** (geocodificação)  
+- **React.js** (usando Vite)  
+- **Bootstrap & SCSS** (para estilização)  
+- **OpenWeather API** (dados climáticos)  
+- **OpenCage API** (geocodificação)  
 
 ## 🚀 Deploy na Vercel
 **Climora** está publicado na Vercel!
