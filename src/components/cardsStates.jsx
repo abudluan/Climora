@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Card, Spinner } from "react-bootstrap";
+import { Row, Col, Card, Spinner, Container } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import '../styles/cardsStates.scss';

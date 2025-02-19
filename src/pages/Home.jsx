@@ -76,7 +76,7 @@ const Home = () => {
 
                     <div className="mt-2 listSuggests">
                         {showSuggestions && suggestions.length > 0 && (
-                            <ListGroup>
+                            <ListGroup role="list">
                                 {suggestions.map((suggestion, index) => {
                                     const components = suggestion.components;
                                     const displayName = formatLocationName(components);
