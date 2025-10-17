@@ -11,27 +11,31 @@ export const getNext24HourForecast = (hourlyForecast) => {
     }) || [];
 };
 
+
 export const getWeeklyForecast = (dailyForecast) => {
     const currentDate = new Date().toLocaleDateString('pt-BR');
 
-    return dailyForecast
-        ? Object.values(
-            dailyForecast.reduce((acc, forecast) => {
-                const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString('pt-BR');
-                const forecastHour = new Date(forecast.dt * 1000).getHours();
+    if (!dailyForecast) return [];
 
-                if (forecastDate !== currentDate) {
-                    if (!acc[forecastDate]) {
-                        acc[forecastDate] = forecast;
-                    } else {
-                        const existingForecastHour = new Date(acc[forecastDate].dt * 1000).getHours();
-                        if (Math.abs(forecastHour - 12) < Math.abs(existingForecastHour - 12)) {
-                            acc[forecastDate] = forecast;
-                        }
-                    }
-                }
-                return acc;
-            }, {})
-        )
-        : [];
+    const forecastByDate = dailyForecast.reduce((acc, forecast) => {
+        const forecastDate = new Date(forecast.dt * 1000).toLocaleDateString('pt-BR');
+        const forecastHour = new Date(forecast.dt * 1000).getHours();
+
+        if (!acc[forecastDate]) {
+            acc[forecastDate] = forecast;
+        } else {
+            const existingForecastHour = new Date(acc[forecastDate].dt * 1000).getHours();
+            if (Math.abs(forecastHour - 12) < Math.abs(existingForecastHour - 12)) {
+                acc[forecastDate] = forecast;
+            }
+        }
+
+        return acc;
+    }, {});
+
+    const result = Object.values(forecastByDate);
+
+    result.sort((a, b) => a.dt - b.dt);
+
+    return result;
 };

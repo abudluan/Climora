@@ -85,7 +85,7 @@ const CardsStates = () => {
     }, [selectedState?.lat, selectedState?.lon]);
 
     return (
-        <Container className="mt-4">
+        <div>
             {loading || !selectedState ? (
                 <div className="text-center mt-5">
                     <Spinner animation="border" variant="light" />
@@ -99,7 +99,7 @@ const CardsStates = () => {
                     airQualityData={selectedState.airQualityData}
                 />
             )}
-        </Container>
+        </div>
     );
 };
 

@@ -1,149 +1,178 @@
-.cardResult {
-    background-color: transparent;
-    color: white;
-    border: none;
-    margin-bottom: 2em;
+.leftCol {
+    .leftCol1 {
+        background-image: url('../assets/bg-today-large.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10px;
+        margin-bottom: 2em;
+        height: 14em;
+    }
+
+    @media (max-width: 768px) {
+        .leftCol1 {
+            background-image: url('../assets/bg-today-small.svg');
+            background-size: cover;
+        }
+    }
 
     .temperature {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        text-align: center;
-        font-size: 3em;
-        font-weight: bold;
-
-    }
-
-    .scientificTemp {
-        margin: auto;
-        margin-bottom: 2em;
-        text-align: center;
-
-        p {
-            margin: auto;
-        }
-    }
-
-    .leftCol {
-        background-color: #21242c9b;
-        border-radius: 0.3em;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: end;
+        margin-right: 0.5em;
+        font-size: 4.5em;
+        color: white;
 
         @media (max-width: 768px) {
-            box-shadow: none;
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+
+    .nameLocal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+
+
+        @media (max-width: 768px) {
+            margin-top: 0.5em;
+        }
+    }
+
+    h5 {
+        text-align: center;
+        color: white;
+    }
+
+    .cardStatus {
+        height: 10em;
+        padding: 0.5em;
+        background-color: #262540;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        color: white;
+        border: #d4d3d917 solid 1px;
+
+
+        .CardTitle {
+            color: #D4D3D9;
+            display: flex;
+            align-items: center;
+        }
+
+        .textInfoCard {
+            font-size: 1.8em;
+            color: #D4D3D9;
+            margin: auto;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .cardNextDays {
+        background-color: transparent;
+
+        @media (max-width: 768px) {
             background-color: transparent;
+            border: none;
+            box-shadow: none;
         }
 
-        .weatherDescription {
-            background-color: #21242c9b;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            color: white;
-
-            h5 {
-                display: flex;
-                align-items: center;
-                margin: auto;
-            }
+        .forecastTitle {
+            color: #D4D3D9;
+            display: flex;
+            align-items: center;
         }
 
-        .cardStatus {
-            padding: 0.5em;
-            background-color: #21242c9b;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            color: white;
+        .cardsDay {
+            background-color: #262540;
+            color: #D4D3D9;
+            border: #d4d3d917 solid 1px;
+        }
 
-            .CardTitle {
-                color: #70869B;
-                display: flex;
-                align-items: center;
+        .forecastTemp {
+            display: flex;
+            justify-content: space-between;
+
+            .tempMax {
+                color: #D4D3D9;
+                text-align: start;
+                margin-left: 0.5em;
             }
 
-            .infoCard {
-                font-size: 1.8em;
+            .tempMin {
+                color: #D4D3D9;
+                text-align: end;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+.rightCol {
+
+    .cardTimeForecast {
+        padding: 1em;
+        background-color: #262540;
+        border-radius: 10px;
+
+        @media (max-width: 768px) {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        .forecastTitle {
+            color: #D4D3D9;
+            display: flex;
+            align-items: center;
+        }
+
+        .cardsHour,
+        .cardsDay {
+            background-color: #302F4A;
+            border: #d4d3d917 solid 1px;
+            color: #D4D3D9;
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+
+            .forecastTemp {
+                text-align: end;
+
             }
         }
     }
 
+    .cardAirQuality {
+        background-color: transparent;
+        color: #D4D3D9;
 
-    .rightCol {
-
-        @media (max-width: 768px) {}
-
-        .cardForecast {
-            padding: 1em;
-            background-color: #21242c9b;
+        .cardAir,
+        .cardPoluition {
+            background-color: #262540;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
 
-            @media (max-width: 768px) {
-                background-color: transparent;
-                border: none;
-                box-shadow: none;
+            .airQualityBall {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                display: inline-block;
             }
 
-
-            ::-webkit-scrollbar {
-                height: 0.5em;
-                border-radius: 5px;
-
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background-color: #17171A;
-                border-radius: 5px;
-            }
-
-            ::-webkit-scrollbar-track {
-                background-color: #21242C;
-                border-radius: 5px;
-            }
-
-            .forecastTitle {
-                color: white;
-                border-bottom: 2px solid white;
-                padding-bottom: 0.5rem;
-                display: flex;
-                align-items: center;
-            }
-
-            .cardsHour,
-            .cardsDay {
-                background-color: #21242C;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                color: white;
-                text-align: center;
-
-                img {
-                    margin: auto;
-                    height: 50px;
-                    width: 50px;
-                }
-
-                .forecastTemp {
-                    font-size: 2em;
-
-                }
-            }
-
-            .cardAir,
-            .cardPoluition {
-                background-color: #21242C;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                color: white;
-                text-align: center;
-
-                .airQualityBall {
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    display: inline-block;
-                }
-
-                .airQualityText {
-                    display: inline-block;
-                    font-size: 1.2em;
-                    margin-left: 0.5em;
-                    font-weight: 600;
-                }
+            .airQualityText {
+                display: inline-block;
+                font-size: 1.2em;
+                margin-left: 0.5em;
+                font-weight: 600;
             }
         }
     }
+
 }
