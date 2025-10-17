@@ -47,7 +47,7 @@
     }
 
     .cardStatus {
-        height: 10em;
+        height: 8em;
         padding: 0.5em;
         background-color: #262540;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -115,6 +115,7 @@
     .cardTimeForecast {
         padding: 1em;
         background-color: #262540;
+        border: #d4d3d917 solid 1px;
         border-radius: 10px;
 
         @media (max-width: 768px) {
@@ -144,33 +145,6 @@
             .forecastTemp {
                 text-align: end;
 
-            }
-        }
-    }
-
-    .cardAirQuality {
-        background-color: transparent;
-        color: #D4D3D9;
-
-        .cardAir,
-        .cardPoluition {
-            background-color: #262540;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            color: white;
-            text-align: center;
-
-            .airQualityBall {
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                display: inline-block;
-            }
-
-            .airQualityText {
-                display: inline-block;
-                font-size: 1.2em;
-                margin-left: 0.5em;
-                font-weight: 600;
             }
         }
     }

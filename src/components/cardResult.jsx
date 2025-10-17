@@ -144,7 +144,7 @@ const cardResult = ({ weatherData, hourlyForecast, dailyForecast, selectedLocati
                             </Col>
                         </Row>
 
-                        <Card className="cardNextDays mt-3">
+                        <Card className="cardNextDays">
                             <p className="forecastTitle">
                                 Previsão para os próximos dias
                             </p>
@@ -187,7 +187,7 @@ const cardResult = ({ weatherData, hourlyForecast, dailyForecast, selectedLocati
                             </p>
                             {getNext24HourForecast(hourlyForecast).map((forecast, index) => (
                                 <div key={index} >
-                                    <Card className="cardsHour text-center mb-2">
+                                    <Card className="cardsHour text-center mb-3">
                                         <div className="d-flex align-items-center px-2 py-1" style={{ gap: '6px' }}>
                                             <img
                                                 src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`}
@@ -215,45 +215,6 @@ const cardResult = ({ weatherData, hourlyForecast, dailyForecast, selectedLocati
 
                                 </div>
                             ))}
-                        </Card>
-
-
-
-                        <Card className="cardAirQuality mt-3">
-                            <p className="forecastTitle">
-                                Qualidade do Ar
-                            </p>
-
-                            <Row>
-                                <Col xs={12} md={6} className="mb-4">
-                                    <Card className="cardAir">
-                                        <p className="mt-3">Índice de Qualidade do Ar (AQI)</p>
-                                        <div >
-                                            <div
-                                                className="airQualityBall"
-                                                style={{ backgroundColor: airQualityData?.main.aqi ? categorizeAirQuality(airQualityData.main.aqi).color : 'gray' }}
-                                            />
-                                            <p className="airQualityText">
-                                                {airQualityData?.main.aqi ? categorizeAirQuality(airQualityData.main.aqi).description : 'Sem informações'}
-                                            </p>
-                                        </div>
-                                    </Card>
-                                </Col>
-                                <Col xs={12} md={6} className="mb-4">
-                                    <Card className="cardPoluition">
-                                        <p className="mt-3">Níveis de Poluentes</p>
-                                        <ul>
-                                            <li>PM2.5: {airQualityData?.components.pm2_5 || 'Sem informações'} µg/m³</li>
-                                            <li>PM10: {airQualityData?.components.pm10 || 'Sem informações'} µg/m³</li>
-                                            <li>CO: {airQualityData?.components.co || 'Sem informações'} µg/m³</li>
-                                            <li>NO₂: {airQualityData?.components.no2 || 'Sem informações'} µg/m³</li>
-                                            <li>SO₂: {airQualityData?.components.so2 || 'Sem informações'} µg/m³</li>
-                                            <li>O₃: {airQualityData?.components.o3 || 'Sem informações'} µg/m³</li>
-                                        </ul>
-                                    </Card>
-                                </Col>
-                            </Row>
-
                         </Card>
                     </Col>
                 </Row>
