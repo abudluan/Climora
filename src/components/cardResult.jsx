@@ -221,10 +221,8 @@ const cardResult = ({ weatherData, hourlyForecast, dailyForecast, selectedLocati
 
                         <Card className="cardAirQuality mt-3">
                             <p className="forecastTitle">
-                                <MdAir className="me-2" size={20} />
                                 Qualidade do Ar
                             </p>
-
 
                             <Row>
                                 <Col xs={12} md={6} className="mb-4">
